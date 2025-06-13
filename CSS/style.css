@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root{
+	--nav-color: #5b5b5b;
+    --nav-hover-color: #000000;
+    --nav-mobile-background-color: #f5f5f5;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #5b5b5b;
+    --nav-dropdown-hover-color: #000000;
+}
+
+
+body{
+	font-family: "Inconsolata", monospace;
+}
+
+/* header section starts  */
+
+header{
+	z-index: 999;
+}
+
+header  .navbar-brand h1{
+	font-weight: 700;
+	font-size: 30px;
+}
+
+header .navbar .offcanvas{
+	background-color: #F5F5F5;
+	width: 300px;
+}
+
+header .navbar .nav-item .nav-link.active{
+	color: #000;
+	font-weight: 500;
+}
+
+header .navbar .nav-item .nav-link{
+	color: var(--nav-dropdown-color);
+	padding: 10px 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+header .navbar .nav-item .nav-link:hover{
+	color: #000;
+}
+
+.navbar .navbar-toggler:focus{
+	box-shadow: none;
+}
+
+.navbar .navbar-toggler-icon{
+	outline: none;
+}
+
+.offcanvas .offcanvas-header button{
+	font-size: 12px;
+	color: var(--nav-dropdown-color);
+	border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+	transition: all 0.3s ease-in-out;
+}
+
+.offcanvas .offcanvas-header button:hover{
+	color: var(--nav-hover-color);
+	font-weight: 700;
+}
+
+
+.navbar .nav-item .nav-link .bi-chevron-down{
+	width: 30px;
+	height: 30px;
+	background: var(--nav-dropdown-color);
+	border-radius: 50px;
+	color:#fff;
+	font-size: 12px;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-item .active:focus i{
+	transform: rotate(180deg);
+}
+
+.navbar .nav-item .active{
+	color: #5b5b5b !important;
+}
+
+
+.navbar .nav-item .nav-link .bi-chevron-down:hover{
+	background-color: #000;
+}
+
+/* header section ends  */
+
+/* portfolio section starts  */
+.portfolio{
+	padding: 50px 0;
+}
+
+.portfolio-header .portfolio-title h2{
+	font-size: 24px;
+}
+
+.portfolio .portfolio-items{
+	overflow: hidden;
+}
+
+.portfolio .portfolio-items img{
+	transform: scale(1);
+	transition: transform 0.3s ease-in-out;
+
+}
+
+.portfolio .portfolio-items:hover img{
+	transform: scale(1.1);
+}
+
+.portfolio .portfolio-items .card-img-overlay{
+	background-color: #00000085;
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-items:hover .card-img-overlay{
+	visibility: visible;
+	opacity: 1;
+}
+
+.portfolio .portfolio-items .portfolio-items-icon i{
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-items .portfolio-items-icon i:hover{
+	color: #000;
+}
+/* portfolio section ends */
+
+/* clients section starts  */
+.clients{
+	padding: 60px 0;
+	background-color: #f9f9f9;
+}
+
+/* clients swiper starts  */
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 116px;
+	height: auto;
+	object-fit: cover;
+	filter: grayscale(100);
+	transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide img:hover{
+	filter: grayscale(0);
+}
+/* clients swiper ends */
+
+/* clients section ends */
+
+/* services section starts  */
+.services{
+	padding: 60px 0;
+}
+
+.services .services-header{
+	padding: 0 12px 60px;
+}
+
+.services-item .card{
+	padding: 40px;
+}
+
+.services-item .card-header i{
+	color: color-mix(in srgb, #000 , transparent 30%);
+	font-size: 52px;
+	transition: all 0.3s ease-in-out;
+	z-index: 5;
+}
+
+.services .services-icon::before{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: color-mix(in srgb, #000000 , transparent 95%);
+	left: 20px;
+	top: 10px;
+	bottom: 0;
+	border-radius: 50px;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.services .card-body h3{
+	display: inline-block;
+	margin-bottom: 20px;
+	color: color-mix(in srgb, #212529 , transparent 30%);
+	border-bottom: 4px solid color-mix(in srgb,#000000 , transparent 90%);
+	cursor: pointer;
+	font-size: 22px;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.services .card-body p{
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.services .card-body a{
+	color: color-mix(in srgb, #212529 , transparent 30%);
+	font-size: 16px;
+	transition: all 0.3s ease-in-out;
+}
+
+.services .services-item:hover .services-icon i,
+.services .services-item:hover .card-body a,
+.services .services-item:hover .card-body h3
+{
+	color: #000000;
+	border-color: #00000084;
+}
+
+.services .services-item:hover .services-icon::before{
+	background-color: color-mix(in srgb, #000000, transparent 90%);
+	z-index: 1;
+}
+
+/* services section ends */
+
+/* testimonial section starts  */
+.testimonial{
+	padding: 60px 0;
+}
+
+.testimonial-item .testimonial-icons{
+	color: #FFC107;
+}
+
+.testimonial-item .quote-icon-right{
+	color: color-mix(in srgb, #000000, transparent 50%);
+}
+
+.testimonial-item .quote-icon-right{
+	position: absolute;
+	display: inline-block;
+	top:  0;
+	bottom: 0;
+	transform: scale(-1,-1);
+}
+
+.testimonial-item p{
+	color: #5b5b5b;
+	font-size: 16px;
+	width: 80%;
+}
+
+.swipertestimonial{
+  width: 100%;
+  height: 100%; 
+}
+
+.swipertestimonial .swiper-slide{
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+.swipertestimonial .swiper-slide img {
+	display: block;
+	width: 120px;
+	height: auto;
+	object-fit: cover;
+	filter: grayscale(0);
+}
+/* testimonial section ends */
+
+/* footer section starts  */
+footer{
+	padding: 40px 0;
+	background-color: #f9f9f9;
+}
+
+.footer-icons a{
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	border: 1px solid color-mix(in srgb, #212529, transparent 50%);
+	color: color-mix(in srgb, #212529, transparent 50%) !important;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer-icons a:hover{
+	color: #101214 !important;
+	border-color: #101214;
+}
+
+.credits a{
+	font-size: 14px;
+	transition: all 0.3s ease-in-out;
+}
+
+.credits a:hover{
+	color: #5b5b5b !important;
+}
+
+/* footer section ends */
+
+/* scroll-top  */
+
+.scroll-top{
+	bottom: 15px;
+	right: 15px;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	color: #ffff;
+	border-radius: 50px;
+	transition: all 0.3s ease-in-out;
+	z-index: 99;
+}
+
+.scroll-top:hover{
+	background-color: #101214;
+}
+
+.scroll-top i{
+	font-size: 16px;
+}
+
+/* services page specific sections starts */
+
+/* header section starts  */
+.services-page header{
+	padding: 20px 0;
+	background-color: var(--nav-dropdown-background-color);
+	z-index: 997;
+}
+/* header section ends */
+
+/* services hero starts  */
+
+.services-page .hero,.about-page .about{
+	padding: 120px;
+	background-color: #f9f9f9;
+}
+
+/* services hero ends  */
+
+/* pricing section starts  */
+
+.services-page .pricing{
+	padding: 60px 0;
+}
+
+.services-page  .card{
+	padding: 60px 40px;
+}
+
+.services-page .services-list li{
+	color: #828181;
+}
+
+.services-page .services-list li .bi-check,.services-page .services-list li .bi-x{
+	color: #059652;
+	font-size: 24px;
+}
+
+.services-page .services-list li .bi-x{
+	color: #A6A8A9;
+}
+
+.services-page .buy-now-btn a,.services-page .buy-now-btn-2 a{
+	color:  color-mix(in srgb, #212529, transparent 40%);
+	padding: 12px 35px 12px 35px;
+	border: 1px solid color-mix(in srgb, #212529, transparent 60%);
+	border-radius: 4px;
+	transition: all 0.3s ease-in-out;
+}
+
+.services-page .buy-now-btn a:hover{
+	background-color: #000000;
+	color: white;
+}
+
+.services-page .pricing-content-2 sup{
+	vertical-align: baseline;
+	font-size: 24px;
+}
+
+.services-page .pricing-content-2 ul{
+	padding: 20px 0;
+}
+
+.services-page .pricing-content-2 ul li i{
+	font-size: 24px;
+}
+
+.services-page .buy-now-btn-2 a {
+	border: 1px solid #828181;
+	color: #ededed;
+}
+
+.services-page .buy-now-btn-2 a:hover{
+	background-color: #141414;
+}
+
+.services-page .card h4{
+	font-size: 48px;
+	position: relative;
+	margin-left: 10px;
+}
+
+.services-page .card sup{
+	font-size: 28px;
+	padding: 0;
+	position: absolute;
+	top: 20px;
+	left: -12px;
+}
+
+.services-page .card h4 span{
+	font-size: 18px;
+	color:  color-mix(in srgb, #212529, transparent 60%);
+	display: inline-block;	
+	margin-left: -10px;
+}
+/* pricing section ends */
+
+/* alternate pricing section starts  */
+.services-page .alt-pricing{
+	padding: 60px 0;
+}
+
+.services-page .alt-pricing .alt-pricing-header{
+	padding: 0 12px 60px;
+}
+
+.services-page .alt-pricing-content{
+	border-bottom: 1px dashed #5b5b5b;
+	padding-bottom: 10px;
+}
+/* alternate pricing section ends */
+
+/* services page specific sections ends */
+
+/* about page specific section starts  */
+.about-page .info{
+	padding: 60px 0;
+}
+
+
+/* about page specific section ends */
