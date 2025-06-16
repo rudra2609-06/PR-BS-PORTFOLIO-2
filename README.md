@@ -1,5 +1,6 @@
-# PR-BS-PORTFOLIO-2
-# README for MyPortfolio
+
+## PORTFOLIO 
+
 
 ## Overview
 
@@ -43,6 +44,10 @@ MyPortfolio is a personal portfolio website designed to showcase the work and se
 - Click on portfolio items to view more details.
 - Use the scroll-to-top button for easy navigation.
 
+## Deployed Link
+
+- You can view the live version of the portfolio at: [MyPortfolio](https://pr-bs-portfolio-2.vercel.app/)
+
 ## Known Issues
 
 - **404 Client Error**: There is a known issue with loading the Swiper CSS file from the CDN:
@@ -57,9 +62,5 @@ This project is licensed under the MIT License. Feel free to use and modify it a
 
 ## Author
 
-- **Johan Stanworth**  
-  [Your Website or Contact Information]  
-
----
-
-Feel free to customize this README file according to your specific project details and requirements!
+- **Rudra Thakkar**  
+  [Contact Information : rudra22822@gmail.com]  
